@@ -20,7 +20,7 @@ services:
       - key: LOG_LEVEL
         value: error
       - key: DB_CONNECTION
-        value: mysql
+        value: pgsql
       - key: DB_HOST
         fromDatabase:
           name: laravel-asset-db
@@ -58,4 +58,4 @@ databases:
   - name: laravel-asset-db
     databaseName: asset_management
     user: asset_user
-    plan: starter
+    plan: free
