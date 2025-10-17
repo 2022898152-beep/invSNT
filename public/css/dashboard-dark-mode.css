@@ -1,0 +1,164 @@
+/* Dashboard Dark Mode Fixes *//* Dashboard Dark Mode Styles - Created on Sept 30, 2025 */
+
+
+
+/* Fix dark mode dashboard text colors *//* General text color for dark mode */
+
+.dark .filament-sidebar,.dark {
+
+.dark .filament-main,    color-scheme: dark;
+
+.dark .filament-header,}
+
+.dark .filament-footer {
+
+    color-scheme: dark !important;/* Content area text */
+
+}.dark .filament-main .text-gray-900,
+
+.dark .filament-main .text-gray-800,
+
+/* Main content text */.dark .filament-main .text-gray-700,
+
+.dark .filament-main,.dark .filament-main .text-gray-600,
+
+.dark .filament-main .text-gray-900,.dark .filament-main .text-gray-500 {
+
+.dark .filament-main .text-gray-800,    color: #f3f4f6 !important;
+
+.dark .filament-main .text-gray-700,}
+
+.dark .filament-main .text-gray-600,
+
+.dark .filament-main .text-gray-500 {/* Navigation elements */
+
+    color: #f3f4f6 !important;.dark .filament-sidebar-nav-link span,
+
+}.dark .filament-sidebar-nav-link-icon,
+
+.dark .filament-sidebar-nav-group-trigger-icon,
+
+/* Main content background */.dark .filament-sidebar-nav-group-trigger span,
+
+.dark .filament-main-content {.dark .filament-breadcrumbs span {
+
+    background-color: #111827 !important;    color: #f3f4f6 !important;
+
+    color: #f3f4f6 !important;}
+
+}
+
+/* Header elements */
+
+/* Table text */.dark .filament-header-heading,
+
+.dark .filament-tables-table tbody tr td,.dark .filament-header-subheading,
+
+.dark .filament-tables-table thead tr th {.dark .filament-header-description {
+
+    color: #f3f4f6 !important;    color: #f3f4f6 !important;
+
+}}
+
+
+
+/* Cards and panels *//* Table content */
+
+.dark .filament-card,.dark .filament-tables-table thead tr th,
+
+.dark .filament-card p,.dark .filament-tables-table tbody tr td,
+
+.dark .filament-card h1,.dark .filament-tables-empty-state-heading,
+
+.dark .filament-card h2,.dark .filament-tables-empty-state-description {
+
+.dark .filament-card h3,    color: #f3f4f6 !important;
+
+.dark .filament-card h4,}
+
+.dark .filament-card span:not(.bg-primary-600):not(.bg-success-600):not(.bg-danger-600):not(.bg-warning-600),
+
+.dark .filament-widget,/* Form content */
+
+.dark .filament-widget p,.dark .filament-forms-field-wrapper label,
+
+.dark .filament-widget span:not(.bg-primary-600):not(.bg-success-600):not(.bg-danger-600):not(.bg-warning-600) {.dark .filament-forms-field-wrapper-label,
+
+    background-color: #1f2937 !important;.dark .filament-forms-field-wrapper legend,
+
+    color: #f3f4f6 !important;.dark .filament-forms-field-wrapper-helper-text,
+
+}.dark .filament-forms-field-wrapper input,
+
+.dark .filament-forms-field-wrapper select,
+
+/* Forms */.dark .filament-forms-field-wrapper textarea {
+
+.dark .filament-forms-field-wrapper label,    color: #f3f4f6 !important;
+
+.dark .filament-forms-field-wrapper input,}
+
+.dark .filament-forms-field-wrapper textarea,
+
+.dark .filament-forms-field-wrapper select {/* Card content */
+
+    color: #f3f4f6 !important;.dark .filament-card-heading,
+
+    background-color: #374151 !important;.dark .filament-card-content p,
+
+}.dark .filament-card-content span,
+
+.dark .filament-widget-content p,
+
+/* Navigation and sidebar */.dark .filament-widget-content span {
+
+.dark .filament-sidebar {    color: #f3f4f6 !important;
+
+    background-color: #1f2937 !important;}
+
+}
+
+/* Dashboard Stats */
+
+.dark .filament-sidebar-nav-group-label,.dark .filament-stats-card-description,
+
+.dark .filament-sidebar-item,.dark .filament-stats-card-value {
+
+.dark .filament-sidebar-item p,    color: #f3f4f6 !important;
+
+.dark .filament-sidebar-item span:not(.bg-primary-600):not(.bg-success-600):not(.bg-danger-600):not(.bg-warning-600) {}
+
+    color: #f3f4f6 !important;
+
+}/* Dropdown content */
+
+.dark .filament-dropdown-list-item,
+
+/* Stats cards */.dark .filament-dropdown-header {
+
+.dark .filament-stats-card {    color: #f3f4f6 !important;
+
+    background-color: #1f2937 !important;}
+
+    border-color: #374151 !important;
+
+}/* Modals */
+
+.dark .filament-modal-heading,
+
+.dark .filament-stats-card-value {.dark .filament-modal-content p,
+
+    color: #f3f4f6 !important;.dark .filament-modal-content span {
+
+}    color: #f3f4f6 !important;
+
+}
+/* Buttons and actions */
+.dark .filament-button-secondary {
+    background-color: #374151 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark .filament-button-secondary:hover {
+    background-color: #4b5563 !important;
+}

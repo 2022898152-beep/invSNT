@@ -1,0 +1,33 @@
+/* Direct login page background override - Sept 30, 2025 */
+html, body, 
+.filament-login-page, 
+.filament-body {
+    background-color: white !important;
+    background: white !important;
+}
+
+/* Ensure text is visible */
+.text-gray-900 {
+    color: #111827 !important;
+}
+
+/* Ensure the login form is visible */
+.filament-login-page .rounded-2xl {
+    background-color: #f3f4f6 !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Force light mode only */
+html, html.dark, html[data-theme="dark"] {
+    color-scheme: light !important;
+    background-color: white !important;
+}
+
+/* Remove all dark mode styling */
+.dark * {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: inherit !important;
+    box-shadow: inherit !important;
+}

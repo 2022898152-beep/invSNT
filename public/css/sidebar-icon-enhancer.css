@@ -1,0 +1,8 @@
+﻿/* Sidebar Icon Enhancer */
+.filament-sidebar-item-icon {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+}
+.filament-sidebar-item.filament-sidebar-item-active .filament-sidebar-item-icon {
+    color: #059669 !important;
+}

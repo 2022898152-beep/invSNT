@@ -1,0 +1,7 @@
+﻿/* Compact Sidebar Tweaks */
+.filament-sidebar.collapsed {
+    width: 4rem !important;
+}
+.filament-main {
+    transition: margin-left 0.3s ease-in-out !important;
+}

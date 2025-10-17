@@ -1,0 +1,141 @@
+/* Modern Tables Styling - Enhanced Clean Design */
+
+/* Main table container with clean borders */
+.filament-tables-container {
+    background-color: white !important;
+    border-radius: var(--card-radius) !important;
+    overflow: hidden !important;
+    border: 1px solid rgb(var(--gray-100)) !important;
+    box-shadow: var(--card-shadow) !important;
+}
+
+.filament-tables-container .filament-tables-table-container {
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Clean table header */
+.filament-tables-header-cell {
+    background-color: #fafbfc !important;
+    color: rgb(var(--gray-600)) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    text-transform: none !important;
+    font-size: 0.875rem !important;
+    letter-spacing: -0.011em !important;
+    padding: 1rem 1.5rem !important;
+    border-bottom: 1px solid rgb(var(--gray-200)) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* Clean table rows with subtle hover */
+.filament-tables-row {
+    transition: background-color 0.1s ease-in-out !important;
+    border-bottom: 1px solid rgb(var(--gray-100)) !important;
+    background-color: white !important;
+}
+
+.filament-tables-row:hover {
+    background-color: #fafbfc !important;
+}
+
+.filament-tables-row.filament-tables-row-selected {
+    background-color: rgba(var(--primary-50), 0.6) !important;
+}
+
+/* Table cells */
+.filament-tables-cell {
+    padding: 0.875rem 1.25rem !important;
+    vertical-align: middle !important;
+}
+
+/* Pagination */
+.filament-tables-pagination {
+    padding: 1rem !important;
+    background-color: rgb(var(--white)) !important;
+    border-top: 1px solid rgb(var(--gray-100)) !important;
+}
+
+/* Pagination buttons */
+.filament-tables-pagination-button {
+    border-radius: 0.375rem !important;
+    padding: 0.375rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.filament-tables-pagination-button:hover:not([disabled]) {
+    background-color: rgb(var(--gray-100)) !important;
+    transform: translateY(-1px) !important;
+}
+
+.filament-tables-pagination-button[aria-current="page"] {
+    background-color: rgb(var(--primary-600)) !important;
+    color: white !important;
+    box-shadow: 0 2px 4px -1px rgba(var(--primary-500), 0.3) !important;
+}
+
+/* Search box */
+.filament-tables-search-input {
+    border-radius: 0.5rem !important;
+    border: 1px solid rgb(var(--gray-200)) !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.filament-tables-search-input:focus {
+    border-color: rgb(var(--primary-500)) !important;
+    box-shadow: 0 0 0 2px rgba(var(--primary-500), 0.25) !important;
+}
+
+/* Empty state */
+.filament-tables-empty-state {
+    padding: 3rem 2rem !important;
+}
+
+.filament-tables-empty-state-heading {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: rgb(var(--gray-700)) !important;
+}
+
+.filament-tables-empty-state-description {
+    font-size: 0.875rem !important;
+    color: rgb(var(--gray-500)) !important;
+    max-width: 20rem !important;
+    margin: 0.75rem auto 1.5rem !important;
+}
+
+.filament-tables-empty-state-icon {
+    color: rgb(var(--gray-400)) !important;
+    height: 3rem !important;
+    width: 3rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Action buttons */
+.filament-tables-actions-container {
+    padding: 0.25rem !important;
+}
+
+.filament-tables-actions-container button {
+    padding: 0.375rem 0.75rem !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.filament-tables-bulk-actions {
+    border-radius: 0.5rem !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Loading indicator */
+.filament-tables-loading-indicator {
+    background-color: rgb(var(--primary-500)) !important;
+    color: white !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(var(--primary-500), 0.1), 0 2px 4px -1px rgba(var(--primary-500), 0.06) !important;
+}

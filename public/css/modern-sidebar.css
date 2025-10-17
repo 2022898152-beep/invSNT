@@ -1,0 +1,309 @@
+/* Modern Sidebar Styles - Ultra Clean Design */
+
+.filament-sidebar {
+    background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%) !important;
+    border-right: 1px solid rgb(var(--gray-200)) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+    width: 90px !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: fixed !important;
+    z-index: 10 !important;
+}
+
+/* Expanded sidebar state with smooth animation */
+.filament-sidebar.filament-sidebar-open {
+    width: 280px !important;
+    max-width: 280px !important;
+    z-index: 20 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Clean sidebar header */
+.filament-sidebar .filament-sidebar-header {
+    border-bottom: 1px solid rgb(var(--gray-100)) !important;
+    padding: 1.25rem 0 !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: white !important;
+}
+
+.filament-sidebar.filament-sidebar-open .filament-sidebar-header {
+    justify-content: flex-start !important;
+    padding-left: 1.5rem !important;
+}
+
+/* Modern navigation items */
+.filament-sidebar .filament-sidebar-nav-item a {
+    margin: 0.25rem 0.5rem !important;
+    border-radius: 8px !important;
+    transition: all 0.15s ease-in-out !important;
+    color: rgb(var(--gray-700)) !important;
+    padding: 0.75rem !important;
+    font-size: 0.875rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    position: relative !important;
+}
+
+.filament-sidebar .filament-sidebar-nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25) !important;
+    transform: translateY(-1px) !important;
+}
+
+.filament-sidebar .filament-sidebar-item-active a {
+    background-color: #b13b42 !important; /* Darker shade of #cd5159 */
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) !important;
+    border-left: none !important;
+    width: 100% !important;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Group labels */
+.filament-sidebar .filament-sidebar-group-label {
+    color: white !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 1.5rem !important;
+    margin: 1.5rem 0 0.5rem 0 !important;
+    font-weight: 600 !important;
+    opacity: 0.8 !important;
+    display: none !important;
+    background-color: rgba(var(--gray-100), 0.5) !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+/* Clean group labels when expanded */
+.filament-sidebar.filament-sidebar-open .filament-sidebar-group-label {
+    display: block !important;
+    text-align: center !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    width: 100% !important;
+    color: rgb(var(--gray-500)) !important;
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Modern clean icons */
+.filament-sidebar .filament-sidebar-nav-item-icon {
+    color: rgb(var(--gray-600)) !important;
+    fill: rgb(var(--gray-600)) !important;
+    stroke: rgb(var(--gray-600)) !important;
+    transition: all 0.15s ease-in-out !important;
+    height: 1.25rem !important;
+    width: 1.25rem !important;
+    margin-right: 0 !important;
+    opacity: 1 !important;
+}
+
+/* Icon spacing when expanded */
+.filament-sidebar.filament-sidebar-open .filament-sidebar-nav-item-icon {
+    margin-right: 0.75rem !important;
+    margin-left: 0 !important;
+}
+
+/* Ensure labels display properly */
+.filament-sidebar .filament-sidebar-nav-item-label {
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+    opacity: 0 !important;
+    transform: translateX(-10px) !important;
+    font-weight: 500 !important;
+    color: white !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.filament-sidebar.filament-sidebar-open .filament-sidebar-nav-item-label {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    display: inline-block !important;
+    color: white !important;
+    max-width: 180px !important;
+    padding-left: 0.25rem !important;
+}
+
+.filament-sidebar .filament-sidebar-nav-item a:hover .filament-sidebar-nav-item-icon {
+    color: white !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)) !important;
+}
+
+.filament-sidebar .filament-sidebar-item-active a .filament-sidebar-nav-item-icon {
+    color: white !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4)) !important;
+}
+
+/* Divider */
+.filament-sidebar .border-t {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    margin: 0.75rem 1rem !important;
+}
+
+/* Collapse/expand button */
+.filament-sidebar .filament-sidebar-collapse-button {
+    color: white !important;
+    transition: all 0.2s ease-in-out !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 50% !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.filament-sidebar .filament-sidebar-collapse-button:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Group toggle button */
+.filament-sidebar .filament-sidebar-group-collapse-button {
+    color: white !important;
+    transition: all 0.2s ease !important;
+    padding: 0.5rem !important;
+    opacity: 0.9 !important;
+}
+
+.filament-sidebar .filament-sidebar-group-collapse-button:hover {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+/* Submenu items */
+.filament-sidebar .filament-sidebar-group-items {
+    padding-left: 0 !important;
+    margin-top: 0.25rem !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+.filament-sidebar.filament-sidebar-open .filament-sidebar-group-items {
+    padding-left: 1.5rem !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-left: 2rem !important;
+    width: calc(100% - 2rem) !important;
+}
+
+/* Brand styling */
+.filament-sidebar a.inline-block {
+    padding: 0 1.5rem !important;
+}
+
+.filament-sidebar .filament-sidebar-header a,
+.filament-sidebar .filament-sidebar-header img {
+    max-width: 100% !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.filament-sidebar.filament-sidebar-open .filament-sidebar-header a,
+.filament-sidebar.filament-sidebar-open .filament-sidebar-header img {
+    max-width: 240px !important;
+}
+
+/* Navigation section */
+.filament-sidebar-nav {
+    padding: 0.5rem 0 !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent !important;
+}
+
+.filament-sidebar-nav::-webkit-scrollbar {
+    width: 4px !important;
+}
+
+.filament-sidebar-nav::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.filament-sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4px !important;
+}
+
+/* Sidebar menu list */
+.filament-sidebar ul.space-y-6 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Adjust spacing between menu items */
+.filament-sidebar .filament-sidebar-nav-item {
+    margin-bottom: 0.125rem !important;
+    width: 100% !important;
+}
+
+/* Make menu items full width with better spacing when expanded */
+.filament-sidebar .filament-sidebar-nav-item a {
+    width: 100% !important;
+}
+
+.filament-sidebar.filament-sidebar-open .filament-sidebar-nav-item {
+    margin-bottom: 0.25rem !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+}
+
+/* Add hover effect to entire sidebar */
+.filament-sidebar {
+    transition: width 0.2s ease-in-out !important;
+}
+
+/* Fix text alignment in expanded state */
+.filament-sidebar.filament-sidebar-open .filament-sidebar-nav-item a {
+    justify-content: flex-start !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    padding-top: 0.875rem !important;
+    padding-bottom: 0.875rem !important;
+    text-align: left !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* User menu styling in sidebar */
+.filament-sidebar .filament-dropdown-list {
+    background-color: #b13b42 !important; /* Darker shade of #cd5159 */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.filament-sidebar .filament-dropdown-list button {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.2s ease !important;
+}
+
+.filament-sidebar .filament-dropdown-list button:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+}

@@ -1,0 +1,83 @@
+@php
+    $user = \Filament\Facades\Filament::auth()->user();
+    $items = \Filament\Facades\Filament::getUserMenuItems();
+
+    $accountItem = $items['account'] ?? null;
+    $accountItemUrl = $accountItem?->getUrl();
+
+    $logoutItem = $items['logout'] ?? null;
+@endphp
+
+{{ \Filament\Facades\Filament::renderHook('user-menu.start') }}
+
+<x-filament::dropdown placement="bottom-end">
+    <x-slot name="trigger" class="ml-4 rtl:ml-0 rtl:mr-4">
+        <button
+            class="block"
+            aria-label="{{ __('filament::layout.buttons.user_menu.label') }}"
+        >
+            <x-filament::user-avatar :user="$user" />
+        </button>
+    </x-slot>
+
+    {{ \Filament\Facades\Filament::renderHook('user-menu.account.before') }}
+
+    @if (filled($accountItemUrl))
+        <x-filament::dropdown.list>
+            <x-filament::dropdown.list.item
+                :color="$accountItem->getColor() ?? 'secondary'"
+                :icon="$accountItem->getIcon() ?? 'heroicon-s-user-circle'"
+                :href="$accountItemUrl"
+                tag="a"
+            >
+                {{ $accountItem->getLabel() ?? \Filament\Facades\Filament::getUserName($user) }}
+            </x-filament::dropdown.list.item>
+        </x-filament::dropdown.list>
+    @else
+        <x-filament::dropdown.header
+            :color="$accountItem?->getColor() ?? 'secondary'"
+            :icon="$accountItem?->getIcon() ?? 'heroicon-s-user-circle'"
+        >
+            {{ $accountItem?->getLabel() ?? \Filament\Facades\Filament::getUserName($user) }}
+        </x-filament::dropdown.header>
+    @endif
+
+    {{ \Filament\Facades\Filament::renderHook('user-menu.account.after') }}
+
+    <x-filament::dropdown.list
+        x-data="{
+            init: function () {
+                // Force light mode
+                localStorage.setItem('theme', 'light')
+                document.documentElement.classList.remove('dark')
+            }
+        }"
+    >
+        <!-- Dark mode toggle removed -->
+
+        @foreach ($items as $key => $item)
+            @if ($key !== 'account' && $key !== 'logout')
+                <x-filament::dropdown.list.item
+                    :color="$item->getColor() ?? 'secondary'"
+                    :icon="$item->getIcon()"
+                    :href="$item->getUrl()"
+                    tag="a"
+                >
+                    {{ $item->getLabel() }}
+                </x-filament::dropdown.list.item>
+            @endif
+        @endforeach
+
+        <x-filament::dropdown.list.item
+            :color="$logoutItem?->getColor() ?? 'secondary'"
+            :icon="$logoutItem?->getIcon() ?? 'heroicon-s-logout'"
+            :action="$logoutItem?->getUrl() ?? route('filament.auth.logout')"
+            method="post"
+            tag="form"
+        >
+            {{ $logoutItem?->getLabel() ?? __('filament::layout.buttons.logout.label') }}
+        </x-filament::dropdown.list.item>
+    </x-filament::dropdown.list>
+</x-filament::dropdown>
+
+{{ \Filament\Facades\Filament::renderHook('user-menu.end') }}

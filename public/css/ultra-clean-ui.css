@@ -1,0 +1,205 @@
+/* Ultra Clean UI Enhancements */
+
+/* ==== GLOBAL SPACING & LAYOUT ==== */
+.filament-page {
+    padding: 0 !important;
+    background-color: #fafbfc !important;
+}
+
+.filament-main-content {
+    padding: 1.5rem !important;
+    max-width: 100% !important;
+}
+
+/* Page header improvements */
+.filament-page-header {
+    background-color: white !important;
+    border-radius: var(--card-radius) !important;
+    border: 1px solid rgb(var(--gray-100)) !important;
+    box-shadow: var(--card-shadow) !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.filament-page-header-heading {
+    font-size: 1.75rem !important;
+    font-weight: var(--font-weight-bold) !important;
+    color: rgb(var(--gray-900)) !important;
+    margin-bottom: 0.25rem !important;
+}
+
+/* ==== CLEAN NAVIGATION ==== */
+.filament-breadcrumbs {
+    margin-bottom: 0.5rem !important;
+}
+
+.filament-breadcrumbs-item {
+    color: rgb(var(--gray-500)) !important;
+    font-size: 0.875rem !important;
+    font-weight: var(--font-weight-normal) !important;
+}
+
+.filament-breadcrumbs-item:hover {
+    color: rgb(var(--primary-600)) !important;
+}
+
+/* ==== CLEAN MODALS ==== */
+.filament-modal {
+    border-radius: var(--card-radius) !important;
+    border: 1px solid rgb(var(--gray-200)) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.filament-modal-header {
+    padding: 1.5rem !important;
+    border-bottom: 1px solid rgb(var(--gray-100)) !important;
+    background-color: white !important;
+}
+
+.filament-modal-content {
+    padding: 1.5rem !important;
+    background-color: white !important;
+}
+
+.filament-modal-footer {
+    padding: 1.5rem !important;
+    border-top: 1px solid rgb(var(--gray-100)) !important;
+    background-color: #fafbfc !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0.75rem !important;
+}
+
+/* ==== CLEAN NOTIFICATIONS ==== */
+.filament-notification {
+    border-radius: var(--card-radius) !important;
+    border: 1px solid rgb(var(--gray-200)) !important;
+    box-shadow: var(--hover-shadow) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+.filament-notification-success {
+    border-left: 4px solid rgb(var(--success)) !important;
+    background-color: rgba(240, 253, 244, 0.95) !important;
+}
+
+.filament-notification-error {
+    border-left: 4px solid rgb(var(--danger)) !important;
+    background-color: rgba(254, 242, 242, 0.95) !important;
+}
+
+.filament-notification-warning {
+    border-left: 4px solid rgb(var(--warning)) !important;
+    background-color: rgba(255, 251, 235, 0.95) !important;
+}
+
+/* ==== CLEAN DROPDOWN MENUS ==== */
+.filament-dropdown-panel {
+    border-radius: var(--button-radius) !important;
+    border: 1px solid rgb(var(--gray-200)) !important;
+    box-shadow: var(--hover-shadow) !important;
+    background-color: white !important;
+    padding: 0.5rem !important;
+}
+
+.filament-dropdown-item {
+    border-radius: calc(var(--button-radius) - 2px) !important;
+    padding: 0.75rem 1rem !important;
+    transition: all 0.1s ease-in-out !important;
+    font-size: 0.875rem !important;
+    color: rgb(var(--gray-700)) !important;
+}
+
+.filament-dropdown-item:hover {
+    background-color: rgb(var(--gray-50)) !important;
+    color: rgb(var(--gray-900)) !important;
+}
+
+/* ==== CLEAN TABS ==== */
+.filament-tabs {
+    border-bottom: 1px solid rgb(var(--gray-200)) !important;
+    background-color: white !important;
+    border-radius: var(--card-radius) var(--card-radius) 0 0 !important;
+}
+
+.filament-tab {
+    padding: 1rem 1.5rem !important;
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 0.875rem !important;
+    color: rgb(var(--gray-600)) !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+.filament-tab:hover {
+    color: rgb(var(--gray-900)) !important;
+    border-bottom-color: rgb(var(--gray-300)) !important;
+}
+
+.filament-tab.active {
+    color: rgb(var(--primary-600)) !important;
+    border-bottom-color: rgb(var(--primary-600)) !important;
+}
+
+/* ==== CLEAN RESOURCE PAGES ==== */
+.filament-resource-page {
+    background-color: transparent !important;
+}
+
+.filament-resource-table-container {
+    background-color: white !important;
+    border-radius: var(--card-radius) !important;
+    border: 1px solid rgb(var(--gray-100)) !important;
+    box-shadow: var(--card-shadow) !important;
+    overflow: hidden !important;
+}
+
+/* ==== LOADING STATES ==== */
+.filament-loading-indicator {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+.filament-spinner {
+    border-color: rgb(var(--gray-200)) !important;
+    border-top-color: rgb(var(--primary-600)) !important;
+}
+
+/* ==== CLEAN ACTIONS ==== */
+.filament-action-group {
+    gap: 0.5rem !important;
+}
+
+.filament-action {
+    border-radius: var(--button-radius) !important;
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 0.875rem !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+/* ==== RESPONSIVE IMPROVEMENTS ==== */
+@media (max-width: 768px) {
+    .filament-main-content {
+        padding: 1rem !important;
+    }
+    
+    .filament-page-header {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .filament-page-header-heading {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ==== SMOOTH TRANSITIONS ==== */
+* {
+    scroll-behavior: smooth !important;
+}
+
+.filament-page,
+.filament-main,
+.filament-sidebar {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}

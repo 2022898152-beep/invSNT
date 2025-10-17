@@ -1,0 +1,9 @@
+﻿/* Sidebar Text Fixes */
+.filament-sidebar-item-label {
+    font-weight: 500 !important;
+    color: #374151 !important;
+}
+.filament-sidebar.collapsed .filament-sidebar-item-label {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}

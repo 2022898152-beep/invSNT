@@ -1,0 +1,228 @@
+/* Custom styles for Ultra Clean UI - Updated October 8, 2025 */
+
+/* ==== FORCE LIGHT MODE & CLEAN BACKGROUND ==== */
+html {
+    color-scheme: light !important;
+}
+
+html, body {
+    background-color: #fafbfc !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.filament-login-page,
+.filament-login-page.bg-gray-100, 
+.filament-login-page.dark\:bg-gray-900,
+.filament-body,
+.filament-body.bg-gray-100,
+.filament-body.dark\:bg-gray-900 {
+    background-color: #fafbfc !important;
+}
+
+/* ==== CLEAN TEXT STYLING ==== */
+.text-gray-900, .dark\:text-gray-900 {
+    color: #111827 !important;
+    font-weight: 500 !important;
+}
+
+/* ==== CLEAN LOGIN CARD ==== */
+.relative.space-y-4.rounded-2xl {
+    background-color: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+    padding: 2rem !important;
+}
+
+/* ==== FIX CHECKBOX AND TERMS OF SERVICE ==== */
+/* Ensure checkbox is clickable */
+input[type="checkbox"] {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+    width: 1rem !important;
+    height: 1rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* Ensure label is clickable */
+label[for="terms"] {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+/* Make checkbox container clickable */
+.flex.items-center {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Ensure links within label are clickable */
+label a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+    position: relative !important;
+}
+
+/* Force light mode - disable all dark mode styles */
+.dark {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+.dark * {
+    color-scheme: light !important;
+}
+
+/* Override all dark mode specific classes */
+[class*="dark\:"] {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: inherit !important;
+}
+
+/* Remove dark mode toggle effects */
+html.dark {
+    background-color: #ffffff !important;
+    color-scheme: light !important;
+}
+
+/* Dashboard Dark Mode Fixes */
+
+/* Fix dark mode dashboard text colors */
+.dark .filament-sidebar,
+.dark .filament-main,
+.dark .filament-header,
+.dark .filament-footer {
+    color-scheme: dark !important;
+}
+
+/* Main content text */
+.dark .filament-main-content {
+    color: #f3f4f6 !important;
+}
+
+/* Table text */
+.dark .filament-tables-table tbody tr td,
+.dark .filament-tables-table thead tr th {
+    color: #f3f4f6 !important;
+}
+
+/* Cards and panels */
+.dark .filament-card p,
+.dark .filament-card h1,
+.dark .filament-card h2,
+.dark .filament-card h3,
+.dark .filament-card h4,
+.dark .filament-card span:not(.bg-primary-600):not(.bg-success-600):not(.bg-danger-600):not(.bg-warning-600),
+.dark .filament-widget p,
+.dark .filament-widget span:not(.bg-primary-600):not(.bg-success-600):not(.bg-danger-600):not(.bg-warning-600) {
+    color: #f3f4f6 !important;
+}
+
+/* Forms */
+.dark .filament-forms-field-wrapper label,
+.dark .filament-forms-field-wrapper input,
+.dark .filament-forms-field-wrapper textarea,
+.dark .filament-forms-field-wrapper select {
+    color: #f3f4f6 !important;
+}
+
+/* Navigation and sidebar */
+.dark .filament-sidebar-nav-group-label,
+.dark .filament-sidebar-item p,
+.dark .filament-sidebar-item span:not(.bg-primary-600):not(.bg-success-600):not(.bg-danger-600):not(.bg-warning-600) {
+    color: #f3f4f6 !important;
+}
+
+/* Remove any purple top borders/lines */
+html, body, .filament-body, .filament-app, .filament-main, .filament-page {
+    border-top: none !important;
+}
+
+/* Remove any purple pseudo-elements at the top */
+html::before, body::before, .filament-body::before, .filament-app::before {
+    display: none !important;
+}
+
+/* Override any Filament top bar/stripe styling */
+.fi-topbar, .filament-topbar, .filament-header {
+    border-top: none !important;
+    background-color: inherit !important;
+}
+
+/* Remove purple accent from any top-level elements */
+.filament-page-header {
+    border-top: none !important;
+}
+
+/* Specifically target any element with a purple border-top */
+*[style*="border-top"] {
+    border-top: none !important;
+}
+
+/* Override any Filament branding stripe */
+.fi-app-header, .fi-layout-header, .fi-sidebar-header, 
+[class*="fi-topbar"], [class*="filament-topbar"],
+[data-slot="topbar"], [data-slot="header"] {
+    border-top: none !important;
+    background: none !important;
+}
+
+/* Remove any ::before pseudo-elements that might create purple lines */
+.fi-app::before, .fi-layout::before, .filament-app::before,
+.fi-page::before, .filament-page::before, .fi-sidebar::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* Force remove any purple accent colors from top elements */
+.fi-color-primary, [class*="fi-color-primary"] {
+    border-top-color: transparent !important;
+}
+
+/* ==== FIX PROFILE DROPDOWN MENU ICON COLOR ON HOVER ==== */
+/* Prevent icons from turning white on hover in dropdown menu */
+.filament-dropdown-list-item:hover svg,
+.filament-dropdown-list-item:hover .filament-dropdown-list-item-icon,
+[x-data*="dropdown"] button:hover svg,
+[role="menuitem"]:hover svg,
+.fi-dropdown-list-item:hover svg,
+.fi-dropdown-list-item:hover [data-slot="icon"] {
+    color: currentColor !important;
+    opacity: 0.7 !important;
+}
+
+/* Keep icon colors visible on hover */
+.filament-dropdown-list button:hover svg,
+.filament-user-menu-button:hover svg,
+button[aria-expanded]:hover svg {
+    color: #6b7280 !important;
+    opacity: 1 !important;
+}
+
+/* Specific fix for profile menu items (SNT, Lock Screen, API Tokens, Sign out) */
+[role="menu"] [role="menuitem"]:hover svg,
+[role="menu"] button:hover svg {
+    color: #4b5563 !important;
+    fill: currentColor !important;
+}
+
+/* Ensure text and icons remain visible together on hover */
+.filament-dropdown-list-item:hover {
+    background-color: #f1f5f9 !important;
+}
+
+.filament-dropdown-list-item:hover * {
+    color: #1f2937 !important;
+}
+
+.filament-dropdown-list-item:hover svg {
+    color: #6b7280 !important;
+}

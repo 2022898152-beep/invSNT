@@ -1,0 +1,172 @@
+/* Modern Dashboard Styles */
+
+/* Dashboard page container */
+.filament-dashboard-page {
+    padding: 1.5rem;
+}
+
+/* Widget containers */
+.filament-widget {
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+/* Stats overview widgets */
+.filament-stats-overview-widget {
+    --stats-card-border-width: 0;
+}
+
+.filament-stats-overview-widget-card {
+    background: linear-gradient(145deg, rgb(var(--white)), rgb(var(--gray-50))) !important;
+    border-radius: var(--card-radius) !important;
+    box-shadow: var(--card-shadow) !important;
+    transition: all 0.2s ease-in-out !important;
+    overflow: hidden !important;
+    padding: 1.5rem !important;
+    position: relative;
+}
+
+.filament-stats-overview-widget-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* Stats card with color accents */
+.filament-stats-overview-widget-card:nth-child(1) {
+    border-left: 4px solid rgb(var(--primary-500)) !important;
+}
+
+.filament-stats-overview-widget-card:nth-child(2) {
+    border-left: 4px solid rgb(var(--secondary-500)) !important;
+}
+
+.filament-stats-overview-widget-card:nth-child(3) {
+    border-left: 4px solid rgb(var(--warning)) !important;
+}
+
+.filament-stats-overview-widget-card:nth-child(4) {
+    border-left: 4px solid rgb(var(--info)) !important;
+}
+
+/* Stats card content styling */
+.filament-stats-overview-widget-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.filament-stats-overview-widget-card-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(var(--gray-600));
+    letter-spacing: 0.025em;
+}
+
+.filament-stats-overview-widget-card-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: rgb(var(--gray-900));
+    line-height: 1.2;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.filament-stats-overview-widget-card-description {
+    font-size: 0.875rem;
+    color: rgb(var(--gray-600));
+}
+
+/* Chart widgets */
+.filament-widget.filament-widgets-chart-widget {
+    background: rgb(var(--white));
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.filament-widget.filament-widgets-chart-widget:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.filament-widgets-chart-widget-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(var(--gray-800));
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgb(var(--gray-200));
+    background-color: rgb(var(--gray-50));
+}
+
+canvas.filament-chart {
+    padding: 1rem;
+    max-height: 300px !important;
+}
+
+/* Account widget */
+.filament-account-widget .filament-card {
+    background: linear-gradient(145deg, rgb(var(--white)), rgb(var(--gray-50)));
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+/* Button styling in widgets */
+.filament-stats-overview-widget-card button {
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* Animation for widgets */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filament-widget {
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.filament-widget:nth-child(1) { animation-delay: 0.1s; }
+.filament-widget:nth-child(2) { animation-delay: 0.2s; }
+.filament-widget:nth-child(3) { animation-delay: 0.3s; }
+.filament-widget:nth-child(4) { animation-delay: 0.4s; }
+
+/* Modern loading indicator for widgets */
+.filament-loading-indicator {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(var(--white));
+    background-color: rgb(var(--primary-500));
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    box-shadow: 0 4px 6px -1px rgba(var(--primary-500-rgb), 0.1), 
+                0 2px 4px -1px rgba(var(--primary-500-rgb), 0.06);
+}
+
+.filament-loading-indicator svg {
+    margin-right: 0.25rem;
+    animation: spin 1s linear infinite;
+    height: 1rem;
+    width: 1rem;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

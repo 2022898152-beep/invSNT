@@ -1,0 +1,75 @@
+/* Modern Login Page Design */
+.filament-login-page {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.filament-login-page .rounded-2xl {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: none !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.filament-login-page .rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.filament-login-page h2 {
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.filament-login-page input {
+    border-radius: 0.5rem;
+    border-color: #d1d5db;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s;
+}
+
+.filament-login-page input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.25);
+}
+
+.filament-login-page .filament-button {
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.filament-login-page .filament-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation */
+.filament-login-page .flex.w-full.justify-center {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.filament-login-page h2 {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.filament-login-page form {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
