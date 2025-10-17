@@ -1,0 +1,61 @@
+services:
+  - type: web
+    name: laravel-asset-management
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: APP_NAME
+        value: Laravel Asset Management
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        sync: false
+      - key: APP_KEY
+        generateValue: true
+      - key: LOG_CHANNEL
+        value: stack
+      - key: LOG_LEVEL
+        value: error
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        fromDatabase:
+          name: laravel-asset-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: laravel-asset-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: laravel-asset-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: laravel-asset-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: laravel-asset-db
+          property: password
+      - key: CACHE_DRIVER
+        value: database
+      - key: SESSION_DRIVER
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: SESSION_LIFETIME
+        value: 1440
+      - key: BROADCAST_DRIVER
+        value: log
+      - key: FILESYSTEM_DISK
+        value: local
+
+databases:
+  - name: laravel-asset-db
+    databaseName: asset_management
+    user: asset_user
+    plan: starter
